@@ -14,12 +14,12 @@ block content
 
             let xhr = new XMLHttpRequest()
             xhr.open('post',url,true)
-            xhr.send()
             xhr.onload = upOnload
             xhr.upload.onloadstart = function () {
                 var ot = new Date().getTime()
                 var oloaded = 0 // 文件大小 0
             }
+            xhr.send()
         }
 
         function upOnload (event) {
