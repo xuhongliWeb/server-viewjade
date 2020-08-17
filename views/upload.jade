@@ -19,12 +19,12 @@ block content
                 var ot = new Date().getTime()
                 var oloaded = 0 // 文件大小 0
             }
-            xhr.send()
+            xhr.send(from)
         }
 
         function upOnload (event) {
             console.log(event, 'event')
-            if(event.target.reponseText === 'success'){
+            if(event.target.responseText === 'ok'){ // 这时自己返回的
                 console.log('成功')
             }else {
                 console.log('faild')
